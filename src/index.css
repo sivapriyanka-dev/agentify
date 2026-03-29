@@ -2,13 +2,27 @@
 
 @import "tailwindcss";
 
-/* @custom-variant dark (&:where(.dark, .dark *)) */
+/* Enable dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
 
+/* Global font */
 * {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
 }
 
-/* @theme {
-  --color-primary: #5044e5;
-} */
+/* Define theme colors properly */
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #7c3aed;
+  --color-accent: #2bb7da;
+}
+
+/* Map utility class manually */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}

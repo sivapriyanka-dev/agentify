@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 const App = () => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light",
+  );
   return (
-    <div>
-      <h1>Hello World. WIP for Agentify App. 🫡 </h1>
-      <h2>Coming Soon!🎉🎉🎉</h2>
+    <div className="dark:bg-black relative">
+      <Navbar theme={theme} setTheme={setTheme} />
+      <Hero />
     </div>
   );
 };
