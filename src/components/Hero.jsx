@@ -26,6 +26,15 @@ const Hero = () => {
         <img src={assets.group_profile} alt="users" />
         <p className="text-xs font-medium">Trusted by 1M+ users worldwide</p>
       </div>
+
+      <div>
+        <img src={assets.hero_img} alt="" className="w-full max-w-6xl" />
+        <img
+          src={assets.bgImage1}
+          alt=""
+          className="absolute -top-40 -right-40 sm:top:-top-100 sm:-right-70 -z-1 dark:hidden"
+        />
+      </div>
     </div>
   );
 };
